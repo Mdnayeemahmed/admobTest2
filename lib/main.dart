@@ -3,15 +3,15 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import 'ad_helper.dart';
 
-void main() {
+ main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   RequestConfiguration requestConfiguration = RequestConfiguration(
-    testDeviceIds: ['2DB5553B338D712077B14562898A1C1D'], // Replace with your test device ID
+    testDeviceIds: ['27AF3FCE08082AD16DF4EFF8A0D547B5'], // Replace with your test device ID
   );
   MobileAds.instance.updateRequestConfiguration(requestConfiguration);
 
-  MobileAds.instance.initialize(); // Initialize after setting configuration
+  await MobileAds.instance.initialize(); // Initialize after setting configuration
 
   runApp(MyApp());
 }
@@ -58,9 +58,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
+     MobileAds.instance.initialize(); // Initialize after setting configuration
+
     Future.delayed(Duration(seconds: 2), () {
       _bannerAd = BannerAd(
-        adUnitId: AdMobService.bannerAdUnitId!,
+        adUnitId: 'ca-app-pub-3940256099942544/6300978111', // Google's test banner ad unit ID
         request: request,
         size: AdSize.banner,
         listener: BannerAdListener(
