@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "293537462263",
+    "project_id": "admobtest-b5032",
+    "storage_bucket": "admobtest-b5032.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293537462263:android:e506174e739d2fc63560f2",
+        "android_client_info": {
+          "package_name": "com.example.admobtest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkTZQGER5wTCym-9CCFsn11ZYMVJe5i50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
